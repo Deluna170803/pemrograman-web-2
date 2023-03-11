@@ -16,4 +16,30 @@ $skills = [
     "Python"=>30,
     "Java"=>50
 ];
+
+if(isset($_POST['submit'])){
+    $skor= 0;
+    if(isset($_POST['skill'])){
+        foreach ($_POST['skill'] as $key){
+            $skor += $skills[$key];
+        }
+    }
+
+    if ($skor == 0){
+        $keterangan = "TIDAK TERPENUHI";
+    }
+    elseif($skor > 0 && $skor <= 40){
+        $keterangan = "KURANG";
+    }
+    elseif($skor > 40 && $skor <= 60){
+        $keterangan = "CUKUP";
+    }
+    elseif($skor > 60 && $skor <=100){
+        $keterangan = "BAIK";
+    }
+    else{
+        $keterangan = "SANGAT BAIK";
+    }
+    
+}
 ?>

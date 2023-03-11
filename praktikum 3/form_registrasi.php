@@ -97,6 +97,8 @@
                 <th>Domisili</th>
                 <th>Program Studi</th>
                 <th>skills</th>
+                <th>Nilai</th>
+                <th>Keterangan</th>
             </tr>
 
             <?php
@@ -119,13 +121,19 @@
                 <td><?= $prodi;?></td>
                 <td><?php foreach ($skill_user as $skill) 
                 {echo $skill;};
+
                 ?>
                 </td>
+                <td><?= $skor;?></td>
+                <td><?= $keterangan;?></td>
             </tr>
             <?php }?>
         </table>
         
     </div>
+    <hr>
+    <br>
+    <footer class="text-center">&copy Deva Lubna Listya TI03 STT-NF 22</footer>
 </body>
 </html>
  
